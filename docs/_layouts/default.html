@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>{{ page.title | default: site.title }}</title>
-    <meta name="description" content="{{ page.description | default: site.description }}">
+    <meta name="description" content="{{ page.description | strip_html | default: site.description }}">
     <link rel="stylesheet" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
     <style>
         :root {
@@ -46,23 +46,10 @@
         code {
             background: var(--code-bg) !important;
             border-color: var(--border);
-            color: var(--text) !important;
         }
 
-        pre code {
-            color: var(--text) !important;
-        }
-
-        [data-theme="dark"] pre,
-        [data-theme="dark"] code {
-            color: #c9d1d9 !important;
-        }
-
-        [data-theme="dark"] .highlight .c,
-        [data-theme="dark"] .highlight .cm,
-        [data-theme="dark"] .highlight .cp,
-        [data-theme="dark"] .highlight .c1 {
-            color: #8b949e !important;
+        [data-theme="dark"] pre {
+            filter: invert(0.88) hue-rotate(180deg);
         }
 
         #theme-toggle {
@@ -87,6 +74,12 @@
     <section class="page-header">
         <h1 class="project-name">{{ page.title | default: site.title }}</h1>
         <h2 class="project-tagline">{{ page.description | default: site.description }}</h2>
+        <style>
+            .project-tagline a {
+                color: inherit;
+                text-decoration: underline;
+            }
+        </style>
     </section>
 
     <section class="main-content">

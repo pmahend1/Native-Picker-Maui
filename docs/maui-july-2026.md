@@ -1,6 +1,7 @@
 ---
 layout: default
-title: "Bringing SwiftUI Picker into .NET MAUI - Prateek Mahendrakar"
+title: "Bringing SwiftUI Picker into .NET MAUI"
+description: 'by <a href="https://pmahend1.github.io/Portfolio/">Prateek Mahendrakar</a>'
 permalink: /
 ---
 
