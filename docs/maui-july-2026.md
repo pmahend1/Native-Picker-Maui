@@ -1,3 +1,10 @@
+---
+layout: default
+title: "Bridging SwiftUI Pickers into .NET MAUI"
+permalink: /
+---
+
+<!-- markdownlint-disable-next-line single-h1  -->
 # .NET MAUI July 2026
 
 Hello to fellow .NET developers. I really like native SwiftUI pickers and the flexitiy it provides creating a great UX.
@@ -460,4 +467,4 @@ Add Mapper for binding properties.
 ## Final Screen Capture
 
 <!-- markdownlint-disable-next-line no-inline-html  -->
-<video controls src="screen-capture.mov" title="Screen Capture"/>
+<video controls src="screen-capture.mov" title="Screen Capture" />
