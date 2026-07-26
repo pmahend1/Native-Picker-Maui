@@ -18,9 +18,9 @@ public class NativePickerHandler() : ViewHandler<NativePicker, UIView>(Mapper)
 
     protected override UIView CreatePlatformView()
     {
-        _bridge = new PickerBridge(items: VirtualView.ItemsSource,
+        _bridge = new PickerBridge(title: VirtualView.Title,
+                                   items: VirtualView.ItemsSource,
                                    selected: VirtualView.SelectedItem,
-                                   title: VirtualView.Title,
                                    style: VirtualView.Kind,
                                    onSelectionChanged: s => DispatchQueue.MainQueue.DispatchAsync(() => VirtualView.SelectedItem = s));
         return _bridge?.UiView ?? new UIView();

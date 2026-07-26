@@ -118,6 +118,4 @@ public struct NativePicker: View {
                      selectedItem: .constant("Red"),
                      style: .navigationLink)
     }
-
-    .padding()
 }
