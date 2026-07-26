@@ -1,24 +1,26 @@
+using CoreFoundation;
 using Microsoft.Maui.Handlers;
 using SwiftUIPicker;
 using UIKit;
 
 namespace MauiSwiftUiPicker.UI;
 
-public partial class NativePickerHandler : ViewHandler<NativePicker, UIView>
+public class NativePickerHandler() : ViewHandler<NativePicker, UIView>(Mapper)
 {
-    public static PropertyMapper<NativePicker, NativePickerHandler> Mapper =
-        new(ViewHandler.ViewMapper)
-        {
-            [nameof(NativePicker.SelectedItem)] = MapSelectedItem,
-        };
+    private PickerBridge? _bridge;
 
-    PickerBridge? _bridge;
-
-    public NativePickerHandler() : base(Mapper) { }
+    public static PropertyMapper<NativePicker, NativePickerHandler> Mapper = new(ViewMapper)
+    {
+        [nameof(NativePicker.SelectedItem)] = MapSelectedItem
+    };
 
     protected override UIView CreatePlatformView()
     {
-        _bridge = new PickerBridge(VirtualView.ItemsSource ?? new List<string>(), VirtualView.SelectedItem ?? "");
+        _bridge = new PickerBridge(items: VirtualView.ItemsSource,
+                                   selected: VirtualView.SelectedItem,
+                                   title: VirtualView.Title,
+                                   style: NativePickerStyle.Inline,
+                                   onSelectionChanged: s =>  DispatchQueue.MainQueue.DispatchAsync(() => VirtualView.SelectedItem = s));
         return _bridge?.UiView ?? new UIView();
     }
 

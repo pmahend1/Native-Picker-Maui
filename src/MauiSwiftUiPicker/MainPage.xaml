@@ -1,4 +1,19 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="MauiSwiftUiPicker.MainPage"/>
+             xmlns:viewModels="clr-namespace:MauiSwiftUiPicker.ViewModels"
+             x:DataType="{x:Type viewModels:MainViewModel}"
+             xmlns:ui="clr-namespace:MauiSwiftUiPicker.UI"
+             x:Class="MauiSwiftUiPicker.MainPage">
+    <VerticalStackLayout Spacing="8"
+                         Padding="16,32">
+        <ui:NativePicker Title="Select Genre"
+                         ItemsSource="{Binding Genres}"
+                         SelectedItem="{Binding SelectedGenre, Mode=TwoWay}" />
+        <Label Margin="{Thickness Top=8}"
+               Text="{Binding SelectedGenre, StringFormat='Selected genre: {0}'}"
+               FontSize="16"
+               HorizontalOptions="Center"
+               HorizontalTextAlignment="Center" />
+    </VerticalStackLayout>
+</ContentPage>

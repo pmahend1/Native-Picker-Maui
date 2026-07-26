@@ -15,6 +15,592 @@
         ]
       },
       {
+        "kind": "TypeDecl",
+        "name": "NativePicker",
+        "printedName": "NativePicker",
+        "children": [
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(items:title:style:selectedItem:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "NativePicker",
+                "printedName": "SwiftUIPicker.NativePicker",
+                "usr": "s:13SwiftUIPicker12NativePickerV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Array",
+                "printedName": "[Swift.String]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sa"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "NativePickerStyle",
+                "printedName": "SwiftUIPicker.NativePickerStyle",
+                "usr": "s:13SwiftUIPicker17NativePickerStyleO"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Binding",
+                "printedName": "SwiftUI.Binding<Swift.String>",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:7SwiftUI7BindingV"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:13SwiftUIPicker12NativePickerV5items5title5style12selectedItemACSaySSG_SSAA0cD5StyleO0A2UI7BindingVySSGtcfc",
+            "mangledName": "$s13SwiftUIPicker12NativePickerV5items5title5style12selectedItemACSaySSG_SSAA0cD5StyleO0A2UI7BindingVySSGtcfc",
+            "moduleName": "SwiftUIPicker",
+            "declAttributes": [
+              "Preconcurrency",
+              "Custom",
+              "AccessControl"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Var",
+            "name": "body",
+            "printedName": "body",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "OpaqueTypeArchetype",
+                "printedName": "some SwiftUI.View",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "View",
+                    "printedName": "SwiftUI.View",
+                    "usr": "s:7SwiftUI4ViewP"
+                  }
+                ]
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:13SwiftUIPicker12NativePickerV4bodyQrvp",
+            "mangledName": "$s13SwiftUIPicker12NativePickerV4bodyQrvp",
+            "moduleName": "SwiftUIPicker",
+            "declAttributes": [
+              "Preconcurrency",
+              "Custom",
+              "AccessControl"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "OpaqueTypeArchetype",
+                    "printedName": "some SwiftUI.View",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "View",
+                        "printedName": "SwiftUI.View",
+                        "usr": "s:7SwiftUI4ViewP"
+                      }
+                    ]
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:13SwiftUIPicker12NativePickerV4bodyQrvg",
+                "mangledName": "$s13SwiftUIPicker12NativePickerV4bodyQrvg",
+                "moduleName": "SwiftUIPicker",
+                "accessorKind": "get"
+              }
+            ]
+          }
+        ],
+        "declKind": "Struct",
+        "usr": "s:13SwiftUIPicker12NativePickerV",
+        "mangledName": "$s13SwiftUIPicker12NativePickerV",
+        "moduleName": "SwiftUIPicker",
+        "declAttributes": [
+          "Preconcurrency",
+          "Custom",
+          "AccessControl"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "View",
+            "printedName": "View",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "Body",
+                "printedName": "Body",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "OpaqueTypeArchetype",
+                    "printedName": "some SwiftUI.View",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "View",
+                        "printedName": "SwiftUI.View",
+                        "usr": "s:7SwiftUI4ViewP"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "usr": "s:7SwiftUI4ViewP",
+            "mangledName": "$s7SwiftUI4ViewP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Sendable",
+            "printedName": "Sendable",
+            "usr": "s:s8SendableP",
+            "mangledName": "$ss8SendableP"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "NativePickerStyle",
+        "printedName": "NativePickerStyle",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "automatic",
+            "printedName": "automatic",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(SwiftUIPicker.NativePickerStyle.Type) -> SwiftUIPicker.NativePickerStyle",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "NativePickerStyle",
+                    "printedName": "SwiftUIPicker.NativePickerStyle",
+                    "usr": "s:13SwiftUIPicker17NativePickerStyleO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "SwiftUIPicker.NativePickerStyle.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "NativePickerStyle",
+                        "printedName": "SwiftUIPicker.NativePickerStyle",
+                        "usr": "s:13SwiftUIPicker17NativePickerStyleO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:13SwiftUIPicker17NativePickerStyleO9automaticyA2CmF",
+            "mangledName": "$s13SwiftUIPicker17NativePickerStyleO9automaticyA2CmF",
+            "moduleName": "SwiftUIPicker"
+          },
+          {
+            "kind": "Var",
+            "name": "segmented",
+            "printedName": "segmented",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(SwiftUIPicker.NativePickerStyle.Type) -> SwiftUIPicker.NativePickerStyle",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "NativePickerStyle",
+                    "printedName": "SwiftUIPicker.NativePickerStyle",
+                    "usr": "s:13SwiftUIPicker17NativePickerStyleO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "SwiftUIPicker.NativePickerStyle.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "NativePickerStyle",
+                        "printedName": "SwiftUIPicker.NativePickerStyle",
+                        "usr": "s:13SwiftUIPicker17NativePickerStyleO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:13SwiftUIPicker17NativePickerStyleO9segmentedyA2CmF",
+            "mangledName": "$s13SwiftUIPicker17NativePickerStyleO9segmentedyA2CmF",
+            "moduleName": "SwiftUIPicker"
+          },
+          {
+            "kind": "Var",
+            "name": "inline",
+            "printedName": "inline",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(SwiftUIPicker.NativePickerStyle.Type) -> SwiftUIPicker.NativePickerStyle",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "NativePickerStyle",
+                    "printedName": "SwiftUIPicker.NativePickerStyle",
+                    "usr": "s:13SwiftUIPicker17NativePickerStyleO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "SwiftUIPicker.NativePickerStyle.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "NativePickerStyle",
+                        "printedName": "SwiftUIPicker.NativePickerStyle",
+                        "usr": "s:13SwiftUIPicker17NativePickerStyleO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:13SwiftUIPicker17NativePickerStyleO6inlineyA2CmF",
+            "mangledName": "$s13SwiftUIPicker17NativePickerStyleO6inlineyA2CmF",
+            "moduleName": "SwiftUIPicker"
+          },
+          {
+            "kind": "Var",
+            "name": "palette",
+            "printedName": "palette",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(SwiftUIPicker.NativePickerStyle.Type) -> SwiftUIPicker.NativePickerStyle",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "NativePickerStyle",
+                    "printedName": "SwiftUIPicker.NativePickerStyle",
+                    "usr": "s:13SwiftUIPicker17NativePickerStyleO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "SwiftUIPicker.NativePickerStyle.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "NativePickerStyle",
+                        "printedName": "SwiftUIPicker.NativePickerStyle",
+                        "usr": "s:13SwiftUIPicker17NativePickerStyleO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:13SwiftUIPicker17NativePickerStyleO7paletteyA2CmF",
+            "mangledName": "$s13SwiftUIPicker17NativePickerStyleO7paletteyA2CmF",
+            "moduleName": "SwiftUIPicker"
+          },
+          {
+            "kind": "Var",
+            "name": "menu",
+            "printedName": "menu",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(SwiftUIPicker.NativePickerStyle.Type) -> SwiftUIPicker.NativePickerStyle",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "NativePickerStyle",
+                    "printedName": "SwiftUIPicker.NativePickerStyle",
+                    "usr": "s:13SwiftUIPicker17NativePickerStyleO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "SwiftUIPicker.NativePickerStyle.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "NativePickerStyle",
+                        "printedName": "SwiftUIPicker.NativePickerStyle",
+                        "usr": "s:13SwiftUIPicker17NativePickerStyleO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:13SwiftUIPicker17NativePickerStyleO4menuyA2CmF",
+            "mangledName": "$s13SwiftUIPicker17NativePickerStyleO4menuyA2CmF",
+            "moduleName": "SwiftUIPicker"
+          },
+          {
+            "kind": "Var",
+            "name": "wheel",
+            "printedName": "wheel",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(SwiftUIPicker.NativePickerStyle.Type) -> SwiftUIPicker.NativePickerStyle",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "NativePickerStyle",
+                    "printedName": "SwiftUIPicker.NativePickerStyle",
+                    "usr": "s:13SwiftUIPicker17NativePickerStyleO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "SwiftUIPicker.NativePickerStyle.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "NativePickerStyle",
+                        "printedName": "SwiftUIPicker.NativePickerStyle",
+                        "usr": "s:13SwiftUIPicker17NativePickerStyleO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:13SwiftUIPicker17NativePickerStyleO5wheelyA2CmF",
+            "mangledName": "$s13SwiftUIPicker17NativePickerStyleO5wheelyA2CmF",
+            "moduleName": "SwiftUIPicker"
+          },
+          {
+            "kind": "Var",
+            "name": "navigationLink",
+            "printedName": "navigationLink",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(SwiftUIPicker.NativePickerStyle.Type) -> SwiftUIPicker.NativePickerStyle",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "NativePickerStyle",
+                    "printedName": "SwiftUIPicker.NativePickerStyle",
+                    "usr": "s:13SwiftUIPicker17NativePickerStyleO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "SwiftUIPicker.NativePickerStyle.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "NativePickerStyle",
+                        "printedName": "SwiftUIPicker.NativePickerStyle",
+                        "usr": "s:13SwiftUIPicker17NativePickerStyleO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:13SwiftUIPicker17NativePickerStyleO14navigationLinkyA2CmF",
+            "mangledName": "$s13SwiftUIPicker17NativePickerStyleO14navigationLinkyA2CmF",
+            "moduleName": "SwiftUIPicker"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(rawValue:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "SwiftUIPicker.NativePickerStyle?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "NativePickerStyle",
+                    "printedName": "SwiftUIPicker.NativePickerStyle",
+                    "usr": "s:13SwiftUIPicker17NativePickerStyleO"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:13SwiftUIPicker17NativePickerStyleO8rawValueACSgSi_tcfc",
+            "mangledName": "$s13SwiftUIPicker17NativePickerStyleO8rawValueACSgSi_tcfc",
+            "moduleName": "SwiftUIPicker",
+            "implicit": true,
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Var",
+            "name": "rawValue",
+            "printedName": "rawValue",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:13SwiftUIPicker17NativePickerStyleO8rawValueSivp",
+            "mangledName": "$s13SwiftUIPicker17NativePickerStyleO8rawValueSivp",
+            "moduleName": "SwiftUIPicker",
+            "implicit": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:13SwiftUIPicker17NativePickerStyleO8rawValueSivg",
+                "mangledName": "$s13SwiftUIPicker17NativePickerStyleO8rawValueSivg",
+                "moduleName": "SwiftUIPicker",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          }
+        ],
+        "declKind": "Enum",
+        "usr": "s:13SwiftUIPicker17NativePickerStyleO",
+        "mangledName": "$s13SwiftUIPicker17NativePickerStyleO",
+        "moduleName": "SwiftUIPicker",
+        "declAttributes": [
+          "AccessControl",
+          "RawDocComment"
+        ],
+        "enumRawTypeName": "Int",
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "RawRepresentable",
+            "printedName": "RawRepresentable",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "RawValue",
+                "printedName": "RawValue",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:SY",
+            "mangledName": "$sSY"
+          }
+        ]
+      },
+      {
         "kind": "Import",
         "name": "Combine",
         "printedName": "Combine",
@@ -23,6 +609,13 @@
         "declAttributes": [
           "RawDocComment"
         ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "SwiftUIPicker"
       },
       {
         "kind": "Import",
@@ -64,12 +657,11 @@
               }
             ],
             "declKind": "Var",
-            "usr": "c:@M@SwiftUIPicker@objc(cs)PickerBridge(py)uiView",
+            "usr": "s:13SwiftUIPicker12PickerBridgeC6uiViewSo6UIViewCSgvp",
             "mangledName": "$s13SwiftUIPicker12PickerBridgeC6uiViewSo6UIViewCSgvp",
             "moduleName": "SwiftUIPicker",
             "declAttributes": [
-              "AccessControl",
-              "ObjC"
+              "AccessControl"
             ],
             "accessors": [
               {
@@ -93,12 +685,9 @@
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "c:@M@SwiftUIPicker@objc(cs)PickerBridge(im)uiView",
+                "usr": "s:13SwiftUIPicker12PickerBridgeC6uiViewSo6UIViewCSgvg",
                 "mangledName": "$s13SwiftUIPicker12PickerBridgeC6uiViewSo6UIViewCSgvg",
                 "moduleName": "SwiftUIPicker",
-                "declAttributes": [
-                  "ObjC"
-                ],
                 "accessorKind": "get"
               }
             ]
@@ -106,7 +695,7 @@
           {
             "kind": "Constructor",
             "name": "init",
-            "printedName": "init(items:selected:)",
+            "printedName": "init(items:selected:title:style:onSelectionChanged:)",
             "children": [
               {
                 "kind": "TypeNominal",
@@ -133,16 +722,44 @@
                 "name": "String",
                 "printedName": "Swift.String",
                 "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "NativePickerStyle",
+                "printedName": "SwiftUIPicker.NativePickerStyle",
+                "usr": "s:13SwiftUIPicker17NativePickerStyleO"
+              },
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(Swift.String) -> ()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ]
               }
             ],
             "declKind": "Constructor",
-            "usr": "c:@M@SwiftUIPicker@objc(cs)PickerBridge(im)initWithItems:selected:",
-            "mangledName": "$s13SwiftUIPicker12PickerBridgeC5items8selectedACSaySSG_SStcfc",
+            "usr": "s:13SwiftUIPicker12PickerBridgeC5items8selected5title5style18onSelectionChangedACSaySSG_S2SAA06NativeC5StyleOySSctcfc",
+            "mangledName": "$s13SwiftUIPicker12PickerBridgeC5items8selected5title5style18onSelectionChangedACSaySSG_S2SAA06NativeC5StyleOySSctcfc",
             "moduleName": "SwiftUIPicker",
-            "objc_name": "initWithItems:selected:",
             "declAttributes": [
-              "AccessControl",
-              "ObjC"
+              "AccessControl"
             ],
             "init_kind": "Designated"
           },
@@ -164,12 +781,97 @@
               }
             ],
             "declKind": "Func",
-            "usr": "c:@M@SwiftUIPicker@objc(cs)PickerBridge(im)setSelected:",
+            "usr": "s:13SwiftUIPicker12PickerBridgeC11setSelectedyySSF",
             "mangledName": "$s13SwiftUIPicker12PickerBridgeC11setSelectedyySSF",
             "moduleName": "SwiftUIPicker",
             "declAttributes": [
-              "AccessControl",
-              "ObjC"
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "updateItems",
+            "printedName": "updateItems(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Array",
+                "printedName": "[Swift.String]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sa"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:13SwiftUIPicker12PickerBridgeC11updateItemsyySaySSGF",
+            "mangledName": "$s13SwiftUIPicker12PickerBridgeC11updateItemsyySaySSGF",
+            "moduleName": "SwiftUIPicker",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "updateTitle",
+            "printedName": "updateTitle(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:13SwiftUIPicker12PickerBridgeC11updateTitleyySSF",
+            "mangledName": "$s13SwiftUIPicker12PickerBridgeC11updateTitleyySSF",
+            "moduleName": "SwiftUIPicker",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "updateStyle",
+            "printedName": "updateStyle(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "NativePickerStyle",
+                "printedName": "SwiftUIPicker.NativePickerStyle",
+                "usr": "s:13SwiftUIPicker17NativePickerStyleO"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:13SwiftUIPicker12PickerBridgeC11updateStyleyyAA06NativecF0OF",
+            "mangledName": "$s13SwiftUIPicker12PickerBridgeC11updateStyleyyAA06NativecF0OF",
+            "moduleName": "SwiftUIPicker",
+            "declAttributes": [
+              "AccessControl"
             ],
             "funcSelfKind": "NonMutating"
           },
@@ -206,8 +908,7 @@
         "moduleName": "SwiftUIPicker",
         "declAttributes": [
           "AccessControl",
-          "ObjC",
-          "RawDocComment"
+          "ObjC"
         ],
         "superclassUsr": "c:objc(cs)NSObject",
         "superclassNames": [
@@ -304,5 +1005,48 @@
     ],
     "json_format_version": 8
   },
-  "ConstValues": []
+  "ConstValues": [
+    {
+      "filePath": "\/Users\/prateek\/Source\/Native-Picker-Maui\/src\/SwiftUIPicker\/SwiftUIPicker\/NativePickerStyle.swift",
+      "kind": "IntegerLiteral",
+      "offset": 168,
+      "length": 9,
+      "value": "1"
+    },
+    {
+      "filePath": "\/Users\/prateek\/Source\/Native-Picker-Maui\/src\/SwiftUIPicker\/SwiftUIPicker\/NativePickerStyle.swift",
+      "kind": "IntegerLiteral",
+      "offset": 187,
+      "length": 6,
+      "value": "2"
+    },
+    {
+      "filePath": "\/Users\/prateek\/Source\/Native-Picker-Maui\/src\/SwiftUIPicker\/SwiftUIPicker\/NativePickerStyle.swift",
+      "kind": "IntegerLiteral",
+      "offset": 203,
+      "length": 7,
+      "value": "3"
+    },
+    {
+      "filePath": "\/Users\/prateek\/Source\/Native-Picker-Maui\/src\/SwiftUIPicker\/SwiftUIPicker\/NativePickerStyle.swift",
+      "kind": "IntegerLiteral",
+      "offset": 220,
+      "length": 4,
+      "value": "4"
+    },
+    {
+      "filePath": "\/Users\/prateek\/Source\/Native-Picker-Maui\/src\/SwiftUIPicker\/SwiftUIPicker\/NativePickerStyle.swift",
+      "kind": "IntegerLiteral",
+      "offset": 234,
+      "length": 5,
+      "value": "5"
+    },
+    {
+      "filePath": "\/Users\/prateek\/Source\/Native-Picker-Maui\/src\/SwiftUIPicker\/SwiftUIPicker\/NativePickerStyle.swift",
+      "kind": "IntegerLiteral",
+      "offset": 249,
+      "length": 14,
+      "value": "6"
+    }
+  ]
 }

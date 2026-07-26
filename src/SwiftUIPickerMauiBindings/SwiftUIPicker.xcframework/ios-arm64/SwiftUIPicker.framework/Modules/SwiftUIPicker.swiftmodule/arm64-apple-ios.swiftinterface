@@ -3,20 +3,51 @@
 // swift-module-flags: -target arm64-apple-ios15.6 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -enable-upcoming-feature DisableOutwardActorInference -enable-upcoming-feature InferSendableFromCaptures -enable-upcoming-feature GlobalActorIsolatedTypesUsability -enable-upcoming-feature MemberImportVisibility -enable-upcoming-feature InferIsolatedConformances -enable-upcoming-feature NonisolatedNonsendingByDefault -enable-experimental-feature DebugDescriptionMacro -enable-bare-slash-regex -module-name SwiftUIPicker
 // swift-module-flags-ignorable:  -formal-cxx-interoperability-mode=off -interface-compiler-version 6.2.4
 import Combine
+import Foundation
 import Swift
 import SwiftUI
 import UIKit
 import _Concurrency
 import _StringProcessing
 import _SwiftConcurrencyShims
+@_Concurrency.MainActor @preconcurrency public struct NativePicker : SwiftUICore.View {
+  @_Concurrency.MainActor @preconcurrency public init(items: [Swift.String], title: Swift.String, style: SwiftUIPicker.NativePickerStyle, selectedItem: SwiftUICore.Binding<Swift.String>)
+  @_Concurrency.MainActor @preconcurrency public var body: some SwiftUICore.View {
+    get
+  }
+  public typealias Body = @_opaqueReturnTypeOf("$s13SwiftUIPicker12NativePickerV4bodyQrvp", 0) __
+}
+public enum NativePickerStyle : Swift.Int {
+  case automatic
+  case segmented
+  case inline
+  case palette
+  case menu
+  case wheel
+  case navigationLink
+  #if compiler(>=5.3) && $NonescapableTypes
+  public init?(rawValue: Swift.Int)
+  #endif
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
 @objc public class PickerBridge : ObjectiveC.NSObject, Combine.ObservableObject {
   #if compiler(>=5.3) && $NonescapableTypes
-  @objc public var uiView: UIKit.UIView? {
-    @objc get
+  public var uiView: UIKit.UIView? {
+    get
   }
   #endif
-  @objc public init(items: [Swift.String], selected: Swift.String)
-  @objc public func setSelected(_ item: Swift.String)
+  public init(items: [Swift.String], selected: Swift.String, title: Swift.String, style: SwiftUIPicker.NativePickerStyle, onSelectionChanged: @escaping (Swift.String) -> Swift.Void)
+  public func setSelected(_ item: Swift.String)
+  public func updateItems(_ newItems: [Swift.String])
+  public func updateTitle(_ newTitle: Swift.String)
+  public func updateStyle(_ newStyle: SwiftUIPicker.NativePickerStyle)
   public typealias ObjectWillChangePublisher = Combine.ObservableObjectPublisher
   @objc deinit
 }
+extension SwiftUIPicker.NativePicker : Swift.Sendable {}
+extension SwiftUIPicker.NativePickerStyle : Swift.Equatable {}
+extension SwiftUIPicker.NativePickerStyle : Swift.Hashable {}
+extension SwiftUIPicker.NativePickerStyle : Swift.RawRepresentable {}

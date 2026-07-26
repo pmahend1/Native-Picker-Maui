@@ -1,4 +1,5 @@
 ﻿using MauiSwiftUiPicker.UI;
+using MauiSwiftUiPicker.ViewModels;
 using Microsoft.Extensions.Logging;
 
 namespace MauiSwiftUiPicker;
@@ -19,12 +20,14 @@ public static class MauiProgram
 #if DEBUG
 		builder.Logging.AddDebug();
 #endif
+
 #if IOS
 		builder.ConfigureMauiHandlers(handlers =>
 		{
-			handlers.AddHandler(typeof(NativePicker), typeof(NativePickerHandler));
+			handlers.AddHandler<NativePicker, NativePickerHandler>();
 		});
 #endif
+		builder.Services.AddSingleton<MainViewModel>().AddSingleton<MainPage>();
 		return builder.Build();
 	}
 }
