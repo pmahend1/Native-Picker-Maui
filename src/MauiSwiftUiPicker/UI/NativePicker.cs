@@ -1,3 +1,5 @@
+using SwiftUIPicker;
+
 namespace MauiSwiftUiPicker.UI;
 
 public class NativePicker : View
@@ -35,5 +37,16 @@ public class NativePicker : View
     {
         get => (string)GetValue(SelectedItemProperty);
         set => SetValue(SelectedItemProperty, value);
+    }
+
+    public static readonly BindableProperty KindProperty = BindableProperty.Create(propertyName: nameof(Kind),
+                                                                                    returnType: typeof(NativePickerStyle),
+                                                                                    declaringType: typeof(NativePicker),
+                                                                                    defaultValue: NativePickerStyle.Menu);
+
+    public NativePickerStyle Kind
+    {
+        get => (NativePickerStyle)GetValue(KindProperty);
+        set => SetValue(KindProperty, value);
     }
 }

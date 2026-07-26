@@ -9,11 +9,17 @@
                          Padding="16,32">
         <ui:NativePicker Title="Select Genre"
                          ItemsSource="{Binding Genres}"
-                         SelectedItem="{Binding SelectedGenre, Mode=TwoWay}" />
+                         SelectedItem="{Binding SelectedGenre, Mode=TwoWay}"
+                         Kind="{Binding SelectedPickerKind}" />
         <Label Margin="{Thickness Top=8}"
                Text="{Binding SelectedGenre, StringFormat='Selected genre: {0}'}"
                FontSize="16"
                HorizontalOptions="Center"
                HorizontalTextAlignment="Center" />
+        <ui:NativePicker Title="Picker Kind Selection"
+                         ItemsSource="{Binding PickerKinds}"
+                         SelectedItem="{Binding SelectedPickerKindText}"
+                         Kind="Segmented"
+                         Margin="0,16,0,0" />
     </VerticalStackLayout>
 </ContentPage>
