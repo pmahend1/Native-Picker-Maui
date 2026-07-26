@@ -22,13 +22,19 @@
           {
             "kind": "Constructor",
             "name": "init",
-            "printedName": "init(items:title:style:selectedItem:)",
+            "printedName": "init(title:items:selectedItem:style:)",
             "children": [
               {
                 "kind": "TypeNominal",
                 "name": "NativePicker",
                 "printedName": "SwiftUIPicker.NativePicker",
                 "usr": "s:13SwiftUIPicker12NativePickerV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
               },
               {
                 "kind": "TypeNominal",
@@ -46,18 +52,6 @@
               },
               {
                 "kind": "TypeNominal",
-                "name": "String",
-                "printedName": "Swift.String",
-                "usr": "s:SS"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "NativePickerStyle",
-                "printedName": "SwiftUIPicker.NativePickerStyle",
-                "usr": "s:13SwiftUIPicker17NativePickerStyleO"
-              },
-              {
-                "kind": "TypeNominal",
                 "name": "Binding",
                 "printedName": "SwiftUI.Binding<Swift.String>",
                 "children": [
@@ -69,16 +63,23 @@
                   }
                 ],
                 "usr": "s:7SwiftUI7BindingV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "NativePickerStyle",
+                "printedName": "SwiftUIPicker.NativePickerStyle",
+                "usr": "s:13SwiftUIPicker17NativePickerStyleO"
               }
             ],
             "declKind": "Constructor",
-            "usr": "s:13SwiftUIPicker12NativePickerV5items5title5style12selectedItemACSaySSG_SSAA0cD5StyleO0A2UI7BindingVySSGtcfc",
-            "mangledName": "$s13SwiftUIPicker12NativePickerV5items5title5style12selectedItemACSaySSG_SSAA0cD5StyleO0A2UI7BindingVySSGtcfc",
+            "usr": "s:13SwiftUIPicker12NativePickerV5title5items12selectedItem5styleACSS_SaySSG0A2UI7BindingVySSGAA0cD5StyleOtcfc",
+            "mangledName": "$s13SwiftUIPicker12NativePickerV5title5items12selectedItem5styleACSS_SaySSG0A2UI7BindingVySSGAA0cD5StyleOtcfc",
             "moduleName": "SwiftUIPicker",
             "declAttributes": [
               "Preconcurrency",
               "Custom",
-              "AccessControl"
+              "AccessControl",
+              "RawDocComment"
             ],
             "init_kind": "Designated"
           },
@@ -695,13 +696,19 @@
           {
             "kind": "Constructor",
             "name": "init",
-            "printedName": "init(items:selected:title:style:onSelectionChanged:)",
+            "printedName": "init(title:items:selected:style:onSelectionChanged:)",
             "children": [
               {
                 "kind": "TypeNominal",
                 "name": "PickerBridge",
                 "printedName": "SwiftUIPicker.PickerBridge",
                 "usr": "c:@M@SwiftUIPicker@objc(cs)PickerBridge"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
               },
               {
                 "kind": "TypeNominal",
@@ -716,12 +723,6 @@
                   }
                 ],
                 "usr": "s:Sa"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "String",
-                "printedName": "Swift.String",
-                "usr": "s:SS"
               },
               {
                 "kind": "TypeNominal",
@@ -755,11 +756,12 @@
               }
             ],
             "declKind": "Constructor",
-            "usr": "s:13SwiftUIPicker12PickerBridgeC5items8selected5title5style18onSelectionChangedACSaySSG_S2SAA06NativeC5StyleOySSctcfc",
-            "mangledName": "$s13SwiftUIPicker12PickerBridgeC5items8selected5title5style18onSelectionChangedACSaySSG_S2SAA06NativeC5StyleOySSctcfc",
+            "usr": "s:13SwiftUIPicker12PickerBridgeC5title5items8selected5style18onSelectionChangedACSS_SaySSGSSAA06NativeC5StyleOySSctcfc",
+            "mangledName": "$s13SwiftUIPicker12PickerBridgeC5title5items8selected5style18onSelectionChangedACSS_SaySSGSSAA06NativeC5StyleOySSctcfc",
             "moduleName": "SwiftUIPicker",
             "declAttributes": [
-              "AccessControl"
+              "AccessControl",
+              "RawDocComment"
             ],
             "init_kind": "Designated"
           },
@@ -785,7 +787,8 @@
             "mangledName": "$s13SwiftUIPicker12PickerBridgeC11setSelectedyySSF",
             "moduleName": "SwiftUIPicker",
             "declAttributes": [
-              "AccessControl"
+              "AccessControl",
+              "RawDocComment"
             ],
             "funcSelfKind": "NonMutating"
           },
@@ -1006,6 +1009,174 @@
     "json_format_version": 8
   },
   "ConstValues": [
+    {
+      "filePath": "\/Users\/prateek\/Source\/Native-Picker-Maui\/src\/SwiftUIPicker\/SwiftUIPicker\/NativePicker.swift",
+      "kind": "StringLiteral",
+      "offset": 1689,
+      "length": 11,
+      "value": "\"Segmented\""
+    },
+    {
+      "filePath": "\/Users\/prateek\/Source\/Native-Picker-Maui\/src\/SwiftUIPicker\/SwiftUIPicker\/NativePicker.swift",
+      "kind": "StringLiteral",
+      "offset": 1799,
+      "length": 7,
+      "value": "\"Color\""
+    },
+    {
+      "filePath": "\/Users\/prateek\/Source\/Native-Picker-Maui\/src\/SwiftUIPicker\/SwiftUIPicker\/NativePicker.swift",
+      "kind": "Array",
+      "offset": 1836,
+      "length": 24,
+      "value": "[\"Red\", \"Green\", \"Blue\"]"
+    },
+    {
+      "filePath": "\/Users\/prateek\/Source\/Native-Picker-Maui\/src\/SwiftUIPicker\/SwiftUIPicker\/NativePicker.swift",
+      "kind": "StringLiteral",
+      "offset": 1907,
+      "length": 5,
+      "value": "\"Red\""
+    },
+    {
+      "filePath": "\/Users\/prateek\/Source\/Native-Picker-Maui\/src\/SwiftUIPicker\/SwiftUIPicker\/NativePicker.swift",
+      "kind": "StringLiteral",
+      "offset": 1986,
+      "length": 8,
+      "value": "\"Inline\""
+    },
+    {
+      "filePath": "\/Users\/prateek\/Source\/Native-Picker-Maui\/src\/SwiftUIPicker\/SwiftUIPicker\/NativePicker.swift",
+      "kind": "StringLiteral",
+      "offset": 2093,
+      "length": 7,
+      "value": "\"Color\""
+    },
+    {
+      "filePath": "\/Users\/prateek\/Source\/Native-Picker-Maui\/src\/SwiftUIPicker\/SwiftUIPicker\/NativePicker.swift",
+      "kind": "Array",
+      "offset": 2130,
+      "length": 24,
+      "value": "[\"Red\", \"Green\", \"Blue\"]"
+    },
+    {
+      "filePath": "\/Users\/prateek\/Source\/Native-Picker-Maui\/src\/SwiftUIPicker\/SwiftUIPicker\/NativePicker.swift",
+      "kind": "StringLiteral",
+      "offset": 2201,
+      "length": 5,
+      "value": "\"Red\""
+    },
+    {
+      "filePath": "\/Users\/prateek\/Source\/Native-Picker-Maui\/src\/SwiftUIPicker\/SwiftUIPicker\/NativePicker.swift",
+      "kind": "StringLiteral",
+      "offset": 2277,
+      "length": 6,
+      "value": "\"Menu\""
+    },
+    {
+      "filePath": "\/Users\/prateek\/Source\/Native-Picker-Maui\/src\/SwiftUIPicker\/SwiftUIPicker\/NativePicker.swift",
+      "kind": "StringLiteral",
+      "offset": 2382,
+      "length": 7,
+      "value": "\"Color\""
+    },
+    {
+      "filePath": "\/Users\/prateek\/Source\/Native-Picker-Maui\/src\/SwiftUIPicker\/SwiftUIPicker\/NativePicker.swift",
+      "kind": "Array",
+      "offset": 2419,
+      "length": 24,
+      "value": "[\"Red\", \"Green\", \"Blue\"]"
+    },
+    {
+      "filePath": "\/Users\/prateek\/Source\/Native-Picker-Maui\/src\/SwiftUIPicker\/SwiftUIPicker\/NativePicker.swift",
+      "kind": "StringLiteral",
+      "offset": 2490,
+      "length": 5,
+      "value": "\"Red\""
+    },
+    {
+      "filePath": "\/Users\/prateek\/Source\/Native-Picker-Maui\/src\/SwiftUIPicker\/SwiftUIPicker\/NativePicker.swift",
+      "kind": "StringLiteral",
+      "offset": 2564,
+      "length": 7,
+      "value": "\"Wheel\""
+    },
+    {
+      "filePath": "\/Users\/prateek\/Source\/Native-Picker-Maui\/src\/SwiftUIPicker\/SwiftUIPicker\/NativePicker.swift",
+      "kind": "StringLiteral",
+      "offset": 2670,
+      "length": 7,
+      "value": "\"Color\""
+    },
+    {
+      "filePath": "\/Users\/prateek\/Source\/Native-Picker-Maui\/src\/SwiftUIPicker\/SwiftUIPicker\/NativePicker.swift",
+      "kind": "Array",
+      "offset": 2707,
+      "length": 24,
+      "value": "[\"Red\", \"Green\", \"Blue\"]"
+    },
+    {
+      "filePath": "\/Users\/prateek\/Source\/Native-Picker-Maui\/src\/SwiftUIPicker\/SwiftUIPicker\/NativePicker.swift",
+      "kind": "StringLiteral",
+      "offset": 2778,
+      "length": 5,
+      "value": "\"Red\""
+    },
+    {
+      "filePath": "\/Users\/prateek\/Source\/Native-Picker-Maui\/src\/SwiftUIPicker\/SwiftUIPicker\/NativePicker.swift",
+      "kind": "StringLiteral",
+      "offset": 2853,
+      "length": 9,
+      "value": "\"Palette\""
+    },
+    {
+      "filePath": "\/Users\/prateek\/Source\/Native-Picker-Maui\/src\/SwiftUIPicker\/SwiftUIPicker\/NativePicker.swift",
+      "kind": "StringLiteral",
+      "offset": 2961,
+      "length": 7,
+      "value": "\"Color\""
+    },
+    {
+      "filePath": "\/Users\/prateek\/Source\/Native-Picker-Maui\/src\/SwiftUIPicker\/SwiftUIPicker\/NativePicker.swift",
+      "kind": "Array",
+      "offset": 2998,
+      "length": 24,
+      "value": "[\"Red\", \"Green\", \"Blue\"]"
+    },
+    {
+      "filePath": "\/Users\/prateek\/Source\/Native-Picker-Maui\/src\/SwiftUIPicker\/SwiftUIPicker\/NativePicker.swift",
+      "kind": "StringLiteral",
+      "offset": 3069,
+      "length": 5,
+      "value": "\"Red\""
+    },
+    {
+      "filePath": "\/Users\/prateek\/Source\/Native-Picker-Maui\/src\/SwiftUIPicker\/SwiftUIPicker\/NativePicker.swift",
+      "kind": "StringLiteral",
+      "offset": 3146,
+      "length": 16,
+      "value": "\"NavigationLink\""
+    },
+    {
+      "filePath": "\/Users\/prateek\/Source\/Native-Picker-Maui\/src\/SwiftUIPicker\/SwiftUIPicker\/NativePicker.swift",
+      "kind": "StringLiteral",
+      "offset": 3261,
+      "length": 7,
+      "value": "\"Color\""
+    },
+    {
+      "filePath": "\/Users\/prateek\/Source\/Native-Picker-Maui\/src\/SwiftUIPicker\/SwiftUIPicker\/NativePicker.swift",
+      "kind": "Array",
+      "offset": 3298,
+      "length": 24,
+      "value": "[\"Red\", \"Green\", \"Blue\"]"
+    },
+    {
+      "filePath": "\/Users\/prateek\/Source\/Native-Picker-Maui\/src\/SwiftUIPicker\/SwiftUIPicker\/NativePicker.swift",
+      "kind": "StringLiteral",
+      "offset": 3369,
+      "length": 5,
+      "value": "\"Red\""
+    },
     {
       "filePath": "\/Users\/prateek\/Source\/Native-Picker-Maui\/src\/SwiftUIPicker\/SwiftUIPicker\/NativePickerStyle.swift",
       "kind": "IntegerLiteral",

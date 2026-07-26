@@ -57,6 +57,11 @@
     </ItemGroup>
     <ItemGroup Condition="$(TargetFramework.StartsWith('net10.0-ios'))">
         <PackageReference Include="SwiftUIPickerMauiBindings"
-                          Version="1.0.2" />
+                          Version="1.0.3" />
+    </ItemGroup>
+    <ItemGroup>
+        <MauiXaml Update="Views\MainPage.xaml">
+            <SubType>Designer</SubType>
+        </MauiXaml>
     </ItemGroup>
 </Project>

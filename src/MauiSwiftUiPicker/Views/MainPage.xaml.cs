@@ -1,6 +1,6 @@
 ﻿using MauiSwiftUiPicker.ViewModels;
 
-namespace MauiSwiftUiPicker;
+namespace MauiSwiftUiPicker.Views;
 
 public partial class MainPage
 {

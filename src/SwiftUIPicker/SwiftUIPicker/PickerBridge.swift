@@ -10,6 +10,8 @@ import SwiftUI
 import UIKit
 
 public class PickerBridge: NSObject, ObservableObject {
+    // MARK: - Properties
+
     @Published var selectedItem: String {
         didSet { onSelectionChanged?(selectedItem); refreshView() }
     }
@@ -33,7 +35,12 @@ public class PickerBridge: NSObject, ObservableObject {
         hostingController?.view
     }
 
-    public init(items: [String], selected: String, title: String, style: NativePickerStyle,
+    // MARK: - Init
+
+    public init(title: String,
+                items: [String],
+                selected: String,
+                style: NativePickerStyle,
                 onSelectionChanged: @escaping (String) -> Void) {
         self.items = items
         selectedItem = selected
@@ -45,13 +52,20 @@ public class PickerBridge: NSObject, ObservableObject {
     }
 
     private func makeView() -> NativePicker {
-        let binding = Binding<String>(get: { self.selectedItem }, set: { self.selectedItem = $0 })
-        return NativePicker(items: items, title: title, style: style, selectedItem: binding)
+        let binding = Binding<String>(get: { self.selectedItem },
+                                      set: { self.selectedItem = $0 })
+
+        return NativePicker(title: title,
+                            items: items,
+                            selectedItem: binding,
+                            style: style)
     }
 
     private func refreshView() {
         hostingController?.rootView = makeView()
     }
+
+    // MARK: - Handlers
 
     public func setSelected(_ item: String) {
         selectedItem = item

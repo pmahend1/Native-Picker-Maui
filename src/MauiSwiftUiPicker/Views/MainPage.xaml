@@ -4,22 +4,32 @@
              xmlns:viewModels="clr-namespace:MauiSwiftUiPicker.ViewModels"
              x:DataType="{x:Type viewModels:MainViewModel}"
              xmlns:ui="clr-namespace:MauiSwiftUiPicker.UI"
-             x:Class="MauiSwiftUiPicker.MainPage">
-    <VerticalStackLayout Spacing="8"
-                         Padding="16,32">
-        <ui:NativePicker Title="Select Genre"
+             x:Class="MauiSwiftUiPicker.Views.MainPage">
+    <Grid RowDefinitions="*,75, 125, 50"
+          RowSpacing="8"
+          Padding="16,32">
+        <ui:NativePicker Grid.Row="0"
+                         Title="Select Genre"
                          ItemsSource="{Binding Genres}"
                          SelectedItem="{Binding SelectedGenre, Mode=TwoWay}"
-                         Kind="{Binding SelectedPickerKind}" />
-        <Label Margin="{Thickness Top=8}"
+                         Kind="{Binding SelectedPickerKind}"
+                         BackgroundColor="Transparent" />
+        <Label Grid.Row="1"
                Text="{Binding SelectedGenre, StringFormat='Selected genre: {0}'}"
                FontSize="16"
                HorizontalOptions="Center"
                HorizontalTextAlignment="Center" />
-        <ui:NativePicker Title="Picker Kind Selection"
+        <ui:NativePicker Grid.Row="2"
+                         Title="Picker Kind Selection"
                          ItemsSource="{Binding PickerKinds}"
                          SelectedItem="{Binding SelectedPickerKindText}"
                          Kind="Segmented"
-                         Margin="0,16,0,0" />
-    </VerticalStackLayout>
+                         Margin="0,16,0,0"
+                         BackgroundColor="Transparent" />
+        <Label Grid.Row="3"
+               Text="{Binding SelectedPickerKind, StringFormat='Selected Picker Kind: {0}'}"
+               FontSize="12"
+               HorizontalOptions="Center"
+               HorizontalTextAlignment="Center" />
+    </Grid>
 </ContentPage>

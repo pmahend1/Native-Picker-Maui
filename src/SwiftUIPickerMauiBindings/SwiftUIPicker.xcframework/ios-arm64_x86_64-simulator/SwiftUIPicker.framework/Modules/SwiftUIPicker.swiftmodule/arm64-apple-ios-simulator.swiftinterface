@@ -11,12 +11,13 @@ import _Concurrency
 import _StringProcessing
 import _SwiftConcurrencyShims
 @_Concurrency.MainActor @preconcurrency public struct NativePicker : SwiftUICore.View {
-  @_Concurrency.MainActor @preconcurrency public init(items: [Swift.String], title: Swift.String, style: SwiftUIPicker.NativePickerStyle, selectedItem: SwiftUICore.Binding<Swift.String>)
+  @_Concurrency.MainActor @preconcurrency public init(title: Swift.String, items: [Swift.String], selectedItem: SwiftUICore.Binding<Swift.String>, style: SwiftUIPicker.NativePickerStyle)
   @_Concurrency.MainActor @preconcurrency public var body: some SwiftUICore.View {
     get
   }
   public typealias Body = @_opaqueReturnTypeOf("$s13SwiftUIPicker12NativePickerV4bodyQrvp", 0) __
 }
+
 public enum NativePickerStyle : Swift.Int {
   case automatic
   case segmented
@@ -39,7 +40,7 @@ public enum NativePickerStyle : Swift.Int {
     get
   }
   #endif
-  public init(items: [Swift.String], selected: Swift.String, title: Swift.String, style: SwiftUIPicker.NativePickerStyle, onSelectionChanged: @escaping (Swift.String) -> Swift.Void)
+  public init(title: Swift.String, items: [Swift.String], selected: Swift.String, style: SwiftUIPicker.NativePickerStyle, onSelectionChanged: @escaping (Swift.String) -> Swift.Void)
   public func setSelected(_ item: Swift.String)
   public func updateItems(_ newItems: [Swift.String])
   public func updateTitle(_ newTitle: Swift.String)

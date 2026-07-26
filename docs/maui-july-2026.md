@@ -102,7 +102,7 @@ I am calling it `NativePicker` and adding simple implementation.
     xcodebuild archive -scheme SwiftUIPicker -destination "generic/platform=iOS" -archivePath build/ios.xcarchive SKIP_INSTALL=NO BUILD_LIBRARY_FOR_DISTRIBUTION=YES
     ```
 
-13. Once these are completed, you will see two xcframework files in `build` folder.
+13. Once these are completed, you will see two xcframework files in `build` folder.  
 ios.xcarchive  
 sim.xcarchive  
 

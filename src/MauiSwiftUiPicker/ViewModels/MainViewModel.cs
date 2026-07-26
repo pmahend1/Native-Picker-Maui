@@ -23,7 +23,9 @@ public partial class MainViewModel : ObservableObject
         nameof(NativePickerStyle.Inline),
         nameof(NativePickerStyle.Menu),
         nameof(NativePickerStyle.Segmented),
-        nameof(NativePickerStyle.Wheel)
+        nameof(NativePickerStyle.Wheel),
+        nameof(NativePickerStyle.NavigationLink),
+        nameof(NativePickerStyle.Palette)
     ];
 
     [ObservableProperty]
@@ -31,5 +33,4 @@ public partial class MainViewModel : ObservableObject
     public partial string SelectedPickerKindText { get; set; } = nameof(NativePickerStyle.Automatic);
 
     public NativePickerStyle SelectedPickerKind => Enum.TryParse(SelectedPickerKindText, true, out NativePickerStyle kind) ? kind : NativePickerStyle.Automatic;
-
 }
