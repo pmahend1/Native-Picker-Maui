@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Bridging SwiftUI Pickers into .NET MAUI"
+title: "Bringing SwiftUI Picker into .NET MAUI - Prateek Mahendrakar"
 permalink: /
 ---
 
