@@ -436,7 +436,7 @@ Now we are at the final stage.
 
 8. Add `NativePicker` in Xaml or C# and verify that it works.
 
-    ```xaml
+    ```xml
     <Grid RowDefinitions="*,75, 125, 50"
           RowSpacing="8"
           Padding="16,32">
