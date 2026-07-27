@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{{ page.title | default: site.title }}</title>
+    <meta name="description" content="{{ page.description | strip_html | default: site.description }}">
+    <link rel="stylesheet" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
+    <style>
+        :root {
+            --bg: #ffffff;
+            --text: #1a1a1a;
+            --header-bg: #159957;
+            --header-bg-2: #155799;
+            --link: #159957;
+            --code-bg: #f3f3f3;
+            --border: #e2e2e2;
+        }
+
+        [data-theme="dark"] {
+            --bg: #0d1117;
+            --text: #e6edf3;
+            --header-bg: #0f3d2e;
+            --header-bg-2: #0d2b4d;
+            --link: #4dd68a;
+            --code-bg: #161b22;
+            --border: #30363d;
+        }
+
+        body {
+            background: var(--bg);
+            color: var(--text);
+            transition: background 0.2s ease, color 0.2s ease;
+        }
+
+        .page-header {
+            background: linear-gradient(120deg, var(--header-bg), var(--header-bg-2));
+        }
+
+        a {
+            color: var(--link);
+        }
+
+        pre,
+        code {
+            background: var(--code-bg) !important;
+            border-color: var(--border);
+        }
+
+        pre,
+        code,
+        pre code {
+            color: var(--text) !important;
+        }
+
+        /* Dark-mode syntax highlighting overrides — VS Code Dark+/Dark Modern palette */
+        [data-theme="dark"] .highlight,
+        [data-theme="dark"] .highlight pre,
+        [data-theme="dark"] .highlight code {
+            background: var(--code-bg) !important;
+            color: #d4d4d4 !important;
+        }
+
+        /* keywords: if, else, public, class, let, var, return, switch, case, struct, func... */
+        [data-theme="dark"] .highlight .k,
+        [data-theme="dark"] .highlight .kd,
+        [data-theme="dark"] .highlight .kn,
+        [data-theme="dark"] .highlight .kp,
+        [data-theme="dark"] .highlight .kr,
+        [data-theme="dark"] .highlight .kt,
+        [data-theme="dark"] .highlight .nt {
+            color: #569cd6 !important;
+            background: transparent !important;
+        }
+
+        /* operators / punctuation */
+        [data-theme="dark"] .highlight .o,
+        [data-theme="dark"] .highlight .ow,
+        [data-theme="dark"] .highlight .p,
+        [data-theme="dark"] .highlight .gp {
+            color: #d4d4d4 !important;
+            background: transparent !important;
+        }
+
+        /* strings */
+        [data-theme="dark"] .highlight .s,
+        [data-theme="dark"] .highlight .s1,
+        [data-theme="dark"] .highlight .s2,
+        [data-theme="dark"] .highlight .sb,
+        [data-theme="dark"] .highlight .sc,
+        [data-theme="dark"] .highlight .sd,
+        [data-theme="dark"] .highlight .se,
+        [data-theme="dark"] .highlight .sh,
+        [data-theme="dark"] .highlight .si,
+        [data-theme="dark"] .highlight .sx,
+        [data-theme="dark"] .highlight .ss {
+            color: #ce9178 !important;
+            background: transparent !important;
+        }
+
+        /* numbers */
+        [data-theme="dark"] .highlight .m,
+        [data-theme="dark"] .highlight .mf,
+        [data-theme="dark"] .highlight .mi,
+        [data-theme="dark"] .highlight .mo,
+        [data-theme="dark"] .highlight .il {
+            color: #b5cea8 !important;
+            background: transparent !important;
+        }
+
+        /* function / method names */
+        [data-theme="dark"] .highlight .nf,
+        [data-theme="dark"] .highlight .fm {
+            color: #dcdcaa !important;
+            background: transparent !important;
+        }
+
+        /* class / type / builtin names */
+        [data-theme="dark"] .highlight .nb,
+        [data-theme="dark"] .highlight .nc,
+        [data-theme="dark"] .highlight .nn,
+        [data-theme="dark"] .highlight .na {
+            color: #4ec9b0 !important;
+            background: transparent !important;
+        }
+
+        /* variables, plain identifiers */
+        [data-theme="dark"] .highlight .nv,
+        [data-theme="dark"] .highlight .vi,
+        [data-theme="dark"] .highlight .vc,
+        [data-theme="dark"] .highlight .vg,
+        [data-theme="dark"] .highlight .n,
+        [data-theme="dark"] .highlight .nx {
+            color: #9cdcfe !important;
+            background: transparent !important;
+        }
+
+        /* comments */
+        [data-theme="dark"] .highlight .c,
+        [data-theme="dark"] .highlight .c1,
+        [data-theme="dark"] .highlight .cm {
+            color: #6a9955 !important;
+            background: transparent !important;
+            font-style: italic;
+        }
+
+        /* Nuke any background-color GitHub's stylesheet sets on individual syntax tokens */
+        .highlight span[class] {
+            background: transparent !important;
+            border: none !important;
+            box-shadow: none !important;
+        }
+
+        /* Newer GitHub Pages markup wraps each code line in <ol><li> - reset any per-line styling */
+        .highlight ol,
+        .highlight li {
+            list-style: none !important;
+            margin: 0 !important;
+            padding-left: 0 !important;
+            background: transparent !important;
+            border: none !important;
+            box-shadow: none !important;
+        }
+
+        .highlight li::marker {
+            content: none !important;
+        }
+
+        /* preprocessor directives (#if / #endif) and anything Rouge fails to classify ($ sigils etc.) */
+        .highlight .err {
+            background-color: transparent !important;
+        }
+
+        [data-theme="dark"] .highlight .cp,
+        [data-theme="dark"] .highlight .err {
+            color: #9b9b9b !important;
+        }
+
+        /* whitespace token - kill visible background/border on indentation, both modes */
+        .highlight .w {
+            background: transparent !important;
+            border: none !important;
+            box-shadow: none !important;
+        }
+
+        #theme-toggle {
+            position: fixed;
+            top: 16px;
+            right: 16px;
+            z-index: 100;
+            background: var(--bg);
+            color: var(--text);
+            border: 1px solid var(--border);
+            border-radius: 20px;
+            padding: 6px 14px;
+            font-size: 14px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <button id="theme-toggle" aria-label="Toggle dark mode">🌙 Dark</button>
+
+    <section class="page-header">
+        <h1 class="project-name">{{ page.title | default: site.title }}</h1>
+        <h2 class="project-tagline">{{ page.description | default: site.description }}</h2>
+        <style>
+            .project-tagline a {
+                color: inherit;
+                text-decoration: underline;
+            }
+        </style>
+    </section>
+
+    <section class="main-content">
+        {{ content }}
+
+        <footer class="site-footer">
+            <span class="site-footer-owner">{{ site.title }}</span>
+        </footer>
+    </section>
+
+    <script>
+        (function () {
+            const root = document.documentElement;
+            const btn = document.getElementById('theme-toggle');
+            const stored = localStorage.getItem('theme');
+            const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+            const initial = stored || (prefersDark ? 'dark' : 'light');
+
+            function apply(theme) {
+                if (theme === 'dark') {
+                    root.setAttribute('data-theme', 'dark');
+                    btn.textContent = '☀️ Light';
+                } else {
+                    root.removeAttribute('data-theme');
+                    btn.textContent = '🌙 Dark';
+                }
+            }
+
+            apply(initial);
+
+            btn.addEventListener('click', function () {
+                const current = root.getAttribute('data-theme') === 'dark' ? 'dark' : 'light';
+                const next = current === 'dark' ? 'light' : 'dark';
+                localStorage.setItem('theme', next);
+                apply(next);
+            });
+        })();
+    </script>
+</body>
+
+</html>

@@ -1,29 +1,43 @@
+using CoreFoundation;
 using Microsoft.Maui.Handlers;
 using SwiftUIPicker;
 using UIKit;
 
 namespace MauiSwiftUiPicker.UI;
 
-public partial class NativePickerHandler : ViewHandler<NativePicker, UIView>
+public class NativePickerHandler() : ViewHandler<NativePicker, UIView>(Mapper)
 {
-    public static PropertyMapper<NativePicker, NativePickerHandler> Mapper =
-        new(ViewHandler.ViewMapper)
-        {
-            [nameof(NativePicker.SelectedItem)] = MapSelectedItem,
-        };
+    private PickerBridge? _bridge;
 
-    PickerBridge? _bridge;
-
-    public NativePickerHandler() : base(Mapper) { }
+    public static PropertyMapper<NativePicker, NativePickerHandler> Mapper = new(ViewMapper)
+    {
+        [nameof(NativePicker.SelectedItem)] = MapSelectedItem,
+        [nameof(NativePicker.Title)] = MapTitle,
+        [nameof(NativePicker.Kind)] = MapPickerKind
+    };
 
     protected override UIView CreatePlatformView()
     {
-        _bridge = new PickerBridge(VirtualView.ItemsSource ?? new List<string>(), VirtualView.SelectedItem ?? "");
+        _bridge = new PickerBridge(title: VirtualView.Title,
+                                   items: VirtualView.ItemsSource,
+                                   selected: VirtualView.SelectedItem,
+                                   style: VirtualView.Kind,
+                                   onSelectionChanged: s => DispatchQueue.MainQueue.DispatchAsync(() => VirtualView.SelectedItem = s));
         return _bridge?.UiView ?? new UIView();
     }
 
     public static void MapSelectedItem(NativePickerHandler handler, NativePicker view)
     {
         handler._bridge?.SetSelected(view.SelectedItem);
+    }
+
+    public static void MapTitle(NativePickerHandler handler, NativePicker view)
+    {
+        handler._bridge?.UpdateTitle(view.Title);
+    }
+
+    public static void MapPickerKind(NativePickerHandler handler, NativePicker view)
+    {
+        handler._bridge?.UpdateStyle(view.Kind);
     }
 }
