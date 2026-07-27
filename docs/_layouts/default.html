@@ -144,16 +144,28 @@
             font-style: italic;
         }
 
+        /* Nuke any background-color GitHub's stylesheet sets on individual syntax tokens */
+        .highlight span[class] {
+            background: transparent !important;
+            border: none !important;
+            box-shadow: none !important;
+        }
+
         /* preprocessor directives (#if / #endif) and anything Rouge fails to classify ($ sigils etc.) */
+        .highlight .err {
+            background-color: transparent !important;
+        }
+
         [data-theme="dark"] .highlight .cp,
         [data-theme="dark"] .highlight .err {
             color: #9b9b9b !important;
-            background: transparent !important;
         }
 
-        /* whitespace token - kill visible background on indentation */
-        [data-theme="dark"] .highlight .w {
+        /* whitespace token - kill visible background/border on indentation, both modes */
+        .highlight .w {
             background: transparent !important;
+            border: none !important;
+            box-shadow: none !important;
         }
 
         #theme-toggle {
