@@ -8,7 +8,7 @@ permalink: /
 <!-- markdownlint-disable-next-line single-h1  -->
 # .NET MAUI July 2026
 
-Hello to fellow .NET developers. I really like native SwiftUI pickers and the flexitiy it provides creating a great UX.
+Hello to fellow .NET developers. I really like native SwiftUI pickers and the flexibility it provides creating a great UX.
 In this article we will explore how to bring native Swift UI picker into .NET MAUI.
 
 ## Content Index
@@ -245,8 +245,10 @@ In order to use the SwiftUI native picker we first need to pack it into a framew
 12. Now build the project for both simulator and iPhone targets so that it can run on them when we develop.
 
     ```powershell
+    # Simulator
     xcodebuild archive -scheme SwiftUIPicker -destination "generic/platform=iOS Simulator" -archivePath build/sim.xcarchive SKIP_INSTALL=NO BUILD_LIBRARY_FOR_DISTRIBUTION=YES
     
+    # iPhone
     xcodebuild archive -scheme SwiftUIPicker -destination "generic/platform=iOS" -archivePath build/ios.xcarchive SKIP_INSTALL=NO BUILD_LIBRARY_FOR_DISTRIBUTION=YES
     ```
 
@@ -270,17 +272,17 @@ This will create our final framework library.
 Initially tried Objective Sharpie but soon started getting header not present in framework error. I could not figure out project setting which makes it generate for newer Xcode. So solution was to find header files in `~/Library/Developer/Xcode/DerivedData` and manually copy and rebuild framework file.
 Instead I wanted to try out [swift-dotnet-bindings](https://wojosoftware.com/blog/swift-dotnet-binding-tool/) and it made the process easier.
 
-Here are the just 5 simple steps as opposed to manually updating ApiDefinitions Enums after Sharpie Bind and scratch head with trial and errors.
+Here are just 5 simple steps as opposed to manually updating ApiDefinitions & Enums after Sharpie Bind and scratching my head with trial and error and this is why I ended up not using Sharpie.
 
-1. Install the Template
+1. Install the template.
 
     `dotnet new install SwiftBindings.Templates`
 
-2. Create a Binding Project
+2. Create a C# iOS binding project.
 
     `dotnet new swift-binding -n SwiftUIPickerMauiBindings`
 
-3. Drop in the `SwiftUIPicker.xcframework` generated earlier inside **`**SwiftUIPickerMauiBindings** folder.
+3. Drop in the `SwiftUIPicker.xcframework` generated earlier inside **SwiftUIPickerMauiBindings** folder.
 
 4. Build
 
@@ -294,11 +296,11 @@ Here are the just 5 simple steps as opposed to manually updating ApiDefinitions 
 
    This will generate nuget package in `bin/Release` folder which we can install in our MAUI project to use. I did not even need to enter details for nuget info. If we make changes and regenerate it is better to increment version with `--version <version>` argument so that dotnet does not use cached nuget.
 
-> Note: The library claims that it auto generates bridge files but when I removed PickerBridge it did not generate C# class, there was `*.bridge` file in **obj** folder which required further manual edits to make to work.
+> Note: The library claims that it auto generates bridge files but when I removed PickerBridge it did not generate C# class, there was `*.bridge` file in **obj** folder which required further manual edits to make to work. Moreover SwiftUI's Picker selection binding is built on a `WritableKeyPath` internally: a Swift mechanism for referencing a mutable property path which the binding generator's auto-bridge feature doesn't support, so I kept the hand-written `PickerBridge` instead.
 
 ### III. Using MAUI bound SwiftUI Picker
 
-Now we have are at the final stage.
+Now we are at the final stage.
 
 1. Create .NET MAUI project.
 
@@ -378,8 +380,7 @@ Now we have are at the final stage.
     }
     ```
 
-6. Add handler to invoke bound MAUI native control.
-Add Mapper for binding properties.
+6. Add handler to invoke bound MAUI native control. Add Mapper for binding properties: SelectedItem, Title and PickerKind. These are the ones that need dynamic updates after the view is created.
 
     ```csharp
     public class NativePickerHandler() : ViewHandler<NativePicker, UIView>(Mapper)
@@ -420,7 +421,7 @@ Add Mapper for binding properties.
     }
     ```
 
-    > Note: `onSelectionChanged` callback is important to make the binding TwoWay. I had some difficultly initially figureing this out.
+    > Note: `onSelectionChanged` callback is important to make the binding TwoWay. I had some difficulty initially figuring this out.
 
 7. Register `NativePickerHandler` in `MauiProgram`
 
