@@ -56,8 +56,9 @@
 
         /* Dark-mode syntax highlighting overrides — VS Code Dark+/Dark Modern palette */
         [data-theme="dark"] .highlight,
-        [data-theme="dark"] .highlight pre {
-            background: #1e1e1e !important;
+        [data-theme="dark"] .highlight pre,
+        [data-theme="dark"] .highlight code {
+            background: var(--code-bg) !important;
             color: #d4d4d4 !important;
         }
 
@@ -149,6 +150,21 @@
             background: transparent !important;
             border: none !important;
             box-shadow: none !important;
+        }
+
+        /* Newer GitHub Pages markup wraps each code line in <ol><li> - reset any per-line styling */
+        .highlight ol,
+        .highlight li {
+            list-style: none !important;
+            margin: 0 !important;
+            padding-left: 0 !important;
+            background: transparent !important;
+            border: none !important;
+            box-shadow: none !important;
+        }
+
+        .highlight li::marker {
+            content: none !important;
         }
 
         /* preprocessor directives (#if / #endif) and anything Rouge fails to classify ($ sigils etc.) */
