@@ -2,18 +2,19 @@
 layout: default
 title: "Bringing SwiftUI Picker into .NET MAUI"
 description: 'by <a href="https://pmahend1.github.io/Portfolio/">Prateek Mahendrakar</a>'
-permalink: /
 ---
 
 <!-- markdownlint-disable-next-line single-h1  -->
-# .NET MAUI July 2026
+# Bringing SwiftUI Picker into .NET MAUI
 
-Hello to fellow .NET developers. I really like native SwiftUI pickers and the flexibility it provides creating a great UX.
+Hello to fellow .NET developers. If we want to bring modern SwiftUI components into MAUI then there is no direct way. I really like the native SwiftUI pickers and the flexibility they provide creating a great UX. We have old Wheel based picker in .NET MAUI.
 In this article we will explore how to bring native Swift UI picker into .NET MAUI.
+
+> This article is created as a part of the annual .NET MAUI UI July community event, where developers from around the world share blog posts and videos showcasing ideas, techniques, and projects built with .NET MAUI throughout July. Learn more about the event here: [.NET MAUI UI July 2026](https://goforgoldman.com/posts/mauiuijuly-26/).
 
 ## Content Index
 
-- [.NET MAUI July 2026](#net-maui-july-2026)
+- [Bringing SwiftUI Picker into .NET MAUI](#bringing-swiftui-picker-into-net-maui)
   - [Content Index](#content-index)
     - [I. SwiftUI Picker library](#i-swiftui-picker-library)
     - [II. MAUI Binding Library](#ii-maui-binding-library)
