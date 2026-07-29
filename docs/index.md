@@ -2,18 +2,19 @@
 layout: default
 title: "Bringing SwiftUI Picker into .NET MAUI"
 description: 'by <a href="https://pmahend1.github.io/Portfolio/">Prateek Mahendrakar</a>'
-permalink: /
 ---
 
 <!-- markdownlint-disable-next-line single-h1  -->
-# .NET MAUI July 2026
+# Bringing SwiftUI Picker into .NET MAUI
 
-Hello to fellow .NET developers. I really like native SwiftUI pickers and the flexibility it provides creating a great UX.
-In this article we will explore how to bring native Swift UI picker into .NET MAUI.
+Hello to fellow .NET developers. If we want to bring modern SwiftUI components into MAUI then there is no direct way. I really like the native SwiftUI pickers and the flexibility they provide creating a great UX. We have the old Wheel based picker in .NET MAUI.
+In this article we will explore how to bring native SwiftUI picker into .NET MAUI.
+
+> This article is created as a part of the annual .NET MAUI UI July community event, where developers from around the world share blog posts and videos showcasing ideas, techniques, and projects built with .NET MAUI throughout July. Learn more about the event here: [.NET MAUI UI July 2026](https://goforgoldman.com/posts/mauiuijuly-26/).
 
 ## Content Index
 
-- [.NET MAUI July 2026](#net-maui-july-2026)
+- [Bringing SwiftUI Picker into .NET MAUI](#bringing-swiftui-picker-into-net-maui)
   - [Content Index](#content-index)
     - [I. SwiftUI Picker library](#i-swiftui-picker-library)
     - [II. MAUI Binding Library](#ii-maui-binding-library)
@@ -25,7 +26,7 @@ In this article we will explore how to bring native Swift UI picker into .NET MA
 In order to use the SwiftUI native picker we first need to pack it into a framework library so that [Objective Sharpie](https://learn.microsoft.com/en-us/dotnet/maui/ios/objective-sharpie/get-started?view=net-maui-10.0) or [swift-dotnet-bindings](https://github.com/justinwojo/swift-dotnet-bindings) can use it to parse into [Native Library Interop](https://learn.microsoft.com/en-us/dotnet/communitytoolkit/maui/native-library-interop/) which .NET understands.
 
 1. Open Xcode
-2. Create new project > Choose Framework under Frameworks & Library section.
+2. Create new project > Choose Framework under Frameworks & Library section
     ![Framework project selection](xcode-framework-selection.png)
 3. Give it a name and choose a location to save.
 4. Create
@@ -269,10 +270,10 @@ This will create our final framework library.
 
 ### II. MAUI Binding Library
 
-Initially tried Objective Sharpie but soon started getting header not present in framework error. I could not figure out project setting which makes it generate for newer Xcode. So solution was to find header files in `~/Library/Developer/Xcode/DerivedData` and manually copy and rebuild framework file.
+Initially tried Objective Sharpie but soon started getting 'header not present in framework' error. I could not figure out project setting which makes it generate for newer Xcode. So solution was to find header files in `~/Library/Developer/Xcode/DerivedData` and manually copy and rebuild framework file.
 Instead I wanted to try out [swift-dotnet-bindings](https://wojosoftware.com/blog/swift-dotnet-binding-tool/) and it made the process easier.
 
-Here are just 5 simple steps as opposed to manually updating ApiDefinitions & Enums after Sharpie Bind and scratching my head with trial and error and this is why I ended up not using Sharpie.
+Here are just 5 simple steps as opposed to manually updating ApiDefinitions & Enums after Sharpie Bind and scratching my head with trial and error, which is why I ended up not using Sharpie.
 
 1. Install the template.
 
@@ -380,7 +381,7 @@ Now we are at the final stage.
     }
     ```
 
-6. Add handler to invoke bound MAUI native control. Add Mapper for binding properties: SelectedItem, Title and PickerKind. These are the ones that need dynamic updates after the view is created.
+6. Add handler to invoke bound MAUI native control. Add Mapper for binding properties: SelectedItem, Title and Kind. These are the ones that need dynamic updates after the view is created.
 
     ```csharp
     public class NativePickerHandler() : ViewHandler<NativePicker, UIView>(Mapper)
