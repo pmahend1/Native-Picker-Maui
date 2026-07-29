@@ -270,10 +270,10 @@ This will create our final framework library.
 
 ### II. MAUI Binding Library
 
-Initially tried Objective Sharpie but soon started getting header not present in framework' error. I could not figure out project setting which makes it generate for newer Xcode. So solution was to find header files in `~/Library/Developer/Xcode/DerivedData` and manually copy and rebuild framework file.
+Initially tried Objective Sharpie but soon started getting 'header not present in framework' error. I could not figure out project setting which makes it generate for newer Xcode. So solution was to find header files in `~/Library/Developer/Xcode/DerivedData` and manually copy and rebuild framework file.
 Instead I wanted to try out [swift-dotnet-bindings](https://wojosoftware.com/blog/swift-dotnet-binding-tool/) and it made the process easier.
 
-Here are just 5 simple steps as opposed to manually updating ApiDefinitions & Enums after Sharpie Bind and scratching my head with trial and error and which is why I ended up not using Sharpie.
+Here are just 5 simple steps as opposed to manually updating ApiDefinitions & Enums after Sharpie Bind and scratching my head with trial and error, which is why I ended up not using Sharpie.
 
 1. Install the template.
 
